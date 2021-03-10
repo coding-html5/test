@@ -1,0 +1,15 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+    background: white;
+}
+#box{
+    color:red;
+    font-size:20px;
+}
+
+
