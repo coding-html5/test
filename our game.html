@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+*
+{
+    box-sizing: border-box; 
+    padding: 0; margin: 0; 
+    outline: none; border: none;
+    font-family: tahoma;
+}
+body
+{
+    overflow: hidden;
+    background: #000;
+}
+cube
+{
+    width: 22px; height: 22px;
+    float: left;
+    filter: brightness(35%);
+}
+cube:nth-child(9n + 1) {background: red;}
+cube:nth-child(9n + 2) {background: orange;}
+cube:nth-child(9n + 3) {background: yellow;}
+cube:nth-child(9n + 4) {background: greenyellow;}
+cube:nth-child(9n + 5) {background: green;}
+cube:nth-child(9n + 6) {background: blue;}
+cube:nth-child(9n + 7) {background: cyan;}
+cube:nth-child(9n + 8) {background: pink;}
+cube:nth-child(9n + 9) {background: purple;}
+
+a
+{
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 200px; height: 200px;
+    box-shadow: inset 0 0 40px #000;
+    cursor: pointer; border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: b 15s ease-in-out infinite; z-index: 1000;
+}
+@keyframes b {
+    0% {background: purple;}
+    10% {background: palevioletred;}
+    20% {background: cyan;}
+    30% {background: blue;}
+    40% {background: green;}
+    50% {background: greenyellow;}
+    60% {background: yellow;}
+    70% {background: orange;}
+    80% {background: orangered;}
+    90% {background: red;}
+    100% {background: purple;}
+}
+a:before
+{
+    content: '';
+    position: absolute;
+    left: 34%; top: 30%;
+    width: 90px; height: 90px;
+    background:#fff;
+    box-shadow: 0 0 6px #000;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(90deg); border-radius: 14% / 80%;
+    box-shadow: none;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <a href=""></a>
+</body>
+<script>
+function back() {
+    for (i =0; i <= 2300; i++) {
+        var cb = document.createElement('cube');
+
+        document.body.appendChild(cb);
+    }
+} back()
+</script>
+</html>
